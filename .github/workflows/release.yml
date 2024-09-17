@@ -100,7 +100,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            redhuang/mx-server
+            gcaaa31928/mx-server
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
@@ -118,7 +118,7 @@ jobs:
           context: .
           load: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }},redhuang/mx-server:latest
+          labels: ${{ steps.meta.outputs.labels }},gcaaa31928/mx-server:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Test
