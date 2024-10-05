@@ -188,7 +188,7 @@ export class AuthService {
             resolve({
               ...params.session,
               ...params.user,
-              user,
+              ...user,
               provider: token.provider,
               providerAccountId: token.providerAccountId,
             } as SessionUser)
